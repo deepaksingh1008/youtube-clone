@@ -1,0 +1,11 @@
+.comment-box {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+.author-profile img {
+  border-radius: 50px;
+}
+.like-dislike span {
+  padding: 5px;
+}

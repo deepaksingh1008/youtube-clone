@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Hedaer */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 10px 10px;
+  position: sticky;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icons img {
+  width: 30px;
+  height: 30px;
+}
+.icons h4 {
+  margin-left: 0;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.Search-bar {
+  border: 2px solid black;
+  width: 267px;
+  border-top-left-radius: 50px; /* Top-left border radius */
+  border-top-right-radius: none; /* Top-right border radius */
+  border-bottom-left-radius: 50px; /* Bottom-left border radius */
+  border-bottom-right-radius: none; /* Bottom-right border radius */
+  border-right-color: transparent;
+}
+.Search-bar input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 3px;
+}
+.svg {
+  border: 2px solid black;
+  border-top-left-radius: none; /* Top-left border radius */
+  border-top-right-radius: 50px; /* Top-right border radius */
+  border-bottom-left-radius: none; /* Bottom-left border radius */
+  border-bottom-right-radius: 50px; /* Bottom-right border radius */
+  cursor: pointer;
+  padding: 1px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.profile svg {
+  width: 25px;
+  height: 28px;
+  /* color: aliceblue; */
+}
+.main-1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.div1 {
+  width: 20%;
+  overflow: auto;
+}
+
+.div2 {
+  width: 80%;
+}

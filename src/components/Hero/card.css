@@ -1,0 +1,40 @@
+.card {
+  height: 270px;
+  width: 24%;
+  /* background-color: red; */
+  margin: 0.5%;
+  cursor: pointer;
+}
+.thumbnail {
+  width: 100%;
+  height: 65%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.dis {
+  padding: 5px;
+}
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1rem;
+}
+.channel {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.channel span {
+  margin-right: 2px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.views {
+  padding: 1px;
+}

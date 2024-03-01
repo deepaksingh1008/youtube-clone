@@ -1,0 +1,43 @@
+.sidebar {
+  height: 100vh;
+  overflow: auto;
+  margin-left: 10px;
+}
+
+.para {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+.list {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.list-1 {
+  text-decoration: none;
+  font-weight: 1.5rem;
+  font-size: 0.9rem;
+  list-style: none;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50px;
+  width: 80%;
+}
+
+.list-1 svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.list-1 span {
+  margin: 3px;
+  font-size: 1rem;
+}
+
+.list-1:hover {
+  background-color: red;
+}

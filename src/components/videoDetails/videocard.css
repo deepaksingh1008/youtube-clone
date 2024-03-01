@@ -1,0 +1,40 @@
+.card-v {
+  height: 270px;
+  width: 100%;
+  /* background-color: red; */
+  margin: 0.5%;
+  cursor: pointer;
+}
+.thumbnail-v {
+  width: 100%;
+  height: 65%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.thumbnail-v img {
+  width: 100%;
+  height: 100%;
+}
+.dis-v {
+  padding: 5px;
+}
+.title-v {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1rem;
+}
+.channel-v {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.channel-v span {
+  margin-right: 2px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.views-v {
+  padding: 1px;
+}

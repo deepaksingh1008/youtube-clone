@@ -1,0 +1,9 @@
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero {
+  height: 100vh;
+  overflow: auto;
+}

@@ -1,0 +1,92 @@
+.video-details {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: blue; */
+  overflow-y: auto;
+  display: flex;
+}
+
+.video-comment {
+  width: 80%;
+  margin: 10px;
+}
+
+.video-setion {
+  height: 80%;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.comment-section {
+  width: 100%;
+  /* background-color: aqua; */
+}
+
+.side-video {
+  width: 20%;
+  justify-content: center;
+  margin: 10px 10px 10px 0px;
+  /* background-color: aqua; */
+  /* background-color: green; */
+}
+
+.react-player {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.v-title {
+  padding: 2px;
+}
+.v-suscribe {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.v-description {
+  padding: 2px;
+  /* box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset; */
+  /* background-color: rgb(129, 122, 122); */
+}
+.v-comments {
+  padding: 2px;
+  width: 100%;
+}
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+.suscribe-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.suscriber {
+}
+.suscribe-btn button {
+  border-radius: 50px;
+  padding: 4px 14px 4px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+}
+.suscribe-btn button svg {
+  width: 30px;
+  height: 22px;
+}
+.share-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.share-section div {
+  border-radius: 50px;
+  padding: 5px;
+  margin: 3px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
