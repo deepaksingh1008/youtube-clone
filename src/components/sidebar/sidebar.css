@@ -41,3 +41,32 @@
 .list-1:hover {
   background-color: red;
 }
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .list {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list-1 {
+    width: 90%;
+    margin: 5px;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .list-1 svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .list-1 span {
+    font-size: 0.9rem;
+  }
+}

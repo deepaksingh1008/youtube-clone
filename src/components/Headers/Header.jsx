@@ -20,12 +20,16 @@ export const Header = () => {
         <>
             <div className="header">
                 <div className="icons">
-                    <FaSlidersH />
+
                     <Link to='/'> <img src={Image} alt="" /></Link>
                     <h5>Youtube</h5>
                 </div>
                 <div className="search">
-                    <div className='Search-bar'>
+                    <div className='Search-bar' onKeyDown={(e) => {
+                        if (e.code === 'Enter') {
+                            handleSearch(e);
+                        }
+                    }}>
                         <input type="text" placeholder='Search' value={search} onChange={(e) => setSearch(e.target.value)}></input>
                     </div>
                     <div className='svg'>

@@ -1,9 +1,8 @@
 import axios from "axios";
 
-const BASE_URL = "https://youtube-v31.p.rapidapi.com";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const options = {
-  url: BASE_URL,
   params: {
     q: "music",
     part: "snippet,id",
@@ -12,14 +11,54 @@ const options = {
     order: "date",
   },
   headers: {
-    "X-RapidAPI-Key": "47929a282dmsha42c1a0c013cc1ap1ceafejsn878db518fd71",
-    "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+    "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
+    "X-RapidAPI-Host": import.meta.env.VITE_HOST,
   },
 };
 
 export const fetchFromApi = async (url) => {
-  const { data } = await axios.get(`${BASE_URL}/${url}`, options);
-  return data;
+  try {
+    const options = {
+      params: {
+        q: "music",
+        part: "snippet,id",
+        regionCode: "US",
+        maxResults: "50",
+        order: "date",
+      },
+      headers: {
+        "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
+        "X-RapidAPI-Host": import.meta.env.VITE_HOST,
+      },
+    };
+    const { data } = await axios.get(
+      `${import.meta.env.VITE_BASE_URL}/${url}`,
+      options
+    );
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchComment = async (id) => {
+  try {
+    const options = {
+      params: {
+        part: "snippet",
+        videoId: id,
+        maxResults: "100",
+      },
+      headers: {
+        "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
+        "X-RapidAPI-Host": import.meta.env.VITE_HOST,
+      },
+    };
+    const { data } = await axios.get(import.meta.env.VITE_COMMENT_URL, options);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // export const fetchSearchApi = async (url, query) => {

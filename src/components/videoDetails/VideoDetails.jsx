@@ -11,11 +11,13 @@ import { useParams, useNavigate } from 'react-router-dom'
 import VideoCrad from './VideoCrad';
 import { fetchFromApi } from '../../api-clients/fetchApi';
 import Comment from './Comment';
+import { fetchComment } from '../../api-clients/fetchApi'
 const VideoDetails = () => {
     const { id } = useParams();
     const [videoDetails, setVideoDetails] = useState({});
     const [video, setReletedVideo] = useState([]);
     const [comment, setComment] = useState([]);
+    const [des, setDes] = useState(false)
     const navigate = useNavigate();
     useEffect(() => {
 
@@ -29,9 +31,9 @@ const VideoDetails = () => {
                 // console.log("data=>", data?.items[0]);
                 setVideoDetails(data?.items[0])
             })
-        fetchFromApi(`commentThreads?part=snippet&videoId=${id}`)
+        fetchComment(id)
             .then((data) => {
-                console.log("Data =>", data);
+                console.log("Data comment =>", data);
                 setComment(data?.items)
             })
     }, [id])
@@ -71,9 +73,13 @@ const VideoDetails = () => {
                             <div style={{ alignItems: 'center' }}>...</div>
                         </div>
                     </div>
+                    <hr />
                     <div className="v-description">
-                        {videoDetails?.snippet?.description}
+                        {des ? (videoDetails?.snippet?.description) : null}
+                        <p style={{ cursor: 'pointer', color: 'blue', padding: '2px' }} onClick={() => setDes(!des)}>{des ? 'Hide' : 'Description'}</p>
+
                     </div>
+                    <hr />
                     <div className="v-comments">
                         <div>{videoDetails?.statistics?.commentCount} comments</div>
                         <div>

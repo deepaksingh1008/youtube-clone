@@ -6,11 +6,14 @@ import { fetchFromApi } from '../../api-clients/fetchApi';
 const Hero = () => {
     const [selectedCategory, setSelectedCategory] = useState('New');
     const [videos, setVideos] = useState([])
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
+        setLoading(true)
         fetchFromApi(`search?part=snippet&q=${selectedCategory}`)
             .then((data) => {
                 //console.log(data);
-                setVideos(data.items)
+                setVideos(data?.items)
+                setLoading(false)
             })
 
     }, [selectedCategory]);
@@ -19,7 +22,9 @@ const Hero = () => {
         <>
             <div className="hero">
                 <div className='videos'>
+                    {loading && <h1 style={{ color: 'black' }}>Loading...</h1>}
                     {
+
                         videos?.map((video, idx) => (
                             <VideoCard key={idx} thumbnail={video.snippet.thumbnails.default.url}
                                 videoId={video.id.videoId}
@@ -29,9 +34,9 @@ const Hero = () => {
                                 publishTime={video.snippet.publishTime}
                                 publishedAt={video.snippet.publishedAt}
                                 title={video.snippet.title}
-
                             />
                         ))
+
                     }
                 </div>
             </div>
